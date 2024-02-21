@@ -12,9 +12,10 @@ public class HinhChuNhat extends Hinhhoc {
     public double Tinhdientich() {
         return chieuDai * chieuRong;
     }
+
     @Override
     public String toString() {
-        return "Hinh chu nhat co chieu dai la: " + this.chieuDai +
-                ", chieu rong" + this.chieuRong + ", dien tich la: "+this.Tinhdientich();
+        return "Hình chữ nhật có chiều dài = " + this.chieuDai +
+                ", chiều rộng = " + this.chieuRong + ", diện tích = " + Tinhdientich();
     }
 }

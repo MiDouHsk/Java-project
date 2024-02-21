@@ -32,12 +32,14 @@ public class DanhSachHinh {
     public void hienThiHinhChuNhatCoDienTichLonNhat() {
         double temp = 0;
         HinhChuNhat hinhChuNhat = new HinhChuNhat();
-        for (Hinhhoc hinhhoc : arrHinhHoc) {
-            if (temp < hinhhoc.Tinhdientich()) {
-                temp = hinhhoc.Tinhdientich();
-                hinhChuNhat = (HinhChuNhat) hinhhoc;
+        for (Hinhhoc hinhHoc : arrHinhHoc) {
+            if (hinhHoc instanceof HinhChuNhat) {
+                if (temp < hinhHoc.Tinhdientich()) {
+                    temp = hinhHoc.Tinhdientich();
+                    hinhChuNhat = (HinhChuNhat) hinhHoc;
+                }
             }
         }
-        System.out.println("Hinh chu nhat co dien tich lon nhat la "+ hinhChuNhat.toString());
+        System.out.println("Hình chữ nhật có diện tích lớn nhất là " + hinhChuNhat.toString());
     }
 }
